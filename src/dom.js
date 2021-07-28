@@ -10,8 +10,12 @@ export default  class Dom {
   }
 
   
-  getSubmitBtn() {
+  getSubBtn() {
     return this.submitBtn;
+  }
+
+  getRefBtn() {
+    return this.refreshBtn;
   }
 
   addScore() {
@@ -23,27 +27,23 @@ export default  class Dom {
     const spans = [];
     values.forEach((val,i) => { 
       const elem = document.createElement('span');
-      if(!i) // if first elem
-        elem.innerHTML = `${val}: `;
-      else 
-        elem.innerHTML = val;
-
+      elem.innerHTML = val;
+      if (!i) elem.innerHTML += ': '; // the first elem
       spans.push(elem);
     });
-
     return spans;
   }
 
-  createLi() {
-    return document.createElement('li');
+  createLiAndAppend(elem) {
+    const parent = document.createElement('li');
+    parent.append(...elem);
+    return parent;
   }
 
-  createScore(n,sc) {
-    // there is easier way
-    const [name, score] = this.createSpans([n,sc]);
-    const li = document.createElement('li');
-    this.createLi().append(name, score);
-    return li;
+  createScore(newName,newScore) {
+    return this.
+    createLiAndAppend(
+      this.createSpans([newName, newScore]));
   }
 
   refresh() {
@@ -51,6 +51,11 @@ export default  class Dom {
     this.leaderboard.get().forEach(s  => {
       this.scores.append( this.createScore(s.name,s.score));
     });
+  }
+
+  clear() {
+    this.leaderboard.erase();
+    this.refresh();
   }
 
 }
