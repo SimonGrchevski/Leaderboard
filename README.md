@@ -20,7 +20,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://flamboyant-khorana-e25906.netlify.app)
+[Live Demo Link](https://simongrchevski.github.io/Leaderboard/)
 
 
 ## Getting Started
