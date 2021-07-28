@@ -50,7 +50,7 @@ export default class Dom {
   refresh() {
     this.scores.innerHTML = '';
     this.leaderboard.get().forEach((s) => {
-      this.scores.append(this.createScore(s.name, s.score));
+      this.scores.append(Dom.createScore(s.name, s.score));
     });
   }
 
