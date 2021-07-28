@@ -11,7 +11,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './docs',
   },
 
   module: {
@@ -23,7 +23,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
 };
