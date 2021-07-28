@@ -40,7 +40,7 @@ export default class Dom {
     return parent;
   }
 
-  createScore(newName, newScore) {
+  static createScore(newName, newScore) {
     return Dom
       .createLiAndAppend(
         Dom.createSpans([newName, newScore]),
