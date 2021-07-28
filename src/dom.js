@@ -1,15 +1,15 @@
-import Leaderboard from "./leaderboard";
-export default  class Dom {
+import Leaderboard from './leaderboard.js';
+
+export default class Dom {
   constructor() {
     this.submitBtn = document.querySelector('.submit-btn');
     this.refreshBtn = document.querySelector('.refresh-btn');
-    this.nameInp  = document.querySelector('#name');
+    this.nameInp = document.querySelector('#name');
     this.scoreInp = document.querySelector('#score');
     this.scores = document.querySelector('.scores-ul');
     this.leaderboard = new Leaderboard();
   }
 
-  
   getSubBtn() {
     return this.submitBtn;
   }
@@ -19,13 +19,13 @@ export default  class Dom {
   }
 
   addScore() {
-    this.leaderboard.addScore(this.nameInp.value,this.scoreInp.value);
+    this.leaderboard.addScore(this.nameInp.value, this.scoreInp.value);
     this.refresh();
   }
 
-  createSpans(values) {
+  static createSpans(values) {
     const spans = [];
-    values.forEach((val,i) => { 
+    values.forEach((val, i) => {
       const elem = document.createElement('span');
       elem.innerHTML = val;
       if (!i) elem.innerHTML += ': '; // the first elem
@@ -34,22 +34,23 @@ export default  class Dom {
     return spans;
   }
 
-  createLiAndAppend(elem) {
+  static createLiAndAppend(elem) {
     const parent = document.createElement('li');
     parent.append(...elem);
     return parent;
   }
 
-  createScore(newName,newScore) {
-    return this.
-    createLiAndAppend(
-      this.createSpans([newName, newScore]));
+  createScore(newName, newScore) {
+    return Dom
+      .createLiAndAppend(
+        Dom.createSpans([newName, newScore]),
+      );
   }
 
   refresh() {
     this.scores.innerHTML = '';
-    this.leaderboard.get().forEach(s  => {
-      this.scores.append( this.createScore(s.name,s.score));
+    this.leaderboard.get().forEach((s) => {
+      this.scores.append(this.createScore(s.name, s.score));
     });
   }
 
@@ -57,5 +58,4 @@ export default  class Dom {
     this.leaderboard.erase();
     this.refresh();
   }
-
 }

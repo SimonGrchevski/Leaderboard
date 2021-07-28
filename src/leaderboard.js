@@ -1,8 +1,8 @@
-import Score from "./score";
+import Score from './score.js';
 
 export default class Leaderboard {
-
   board;
+
   constructor() {
     this.init();
   }
@@ -14,8 +14,9 @@ export default class Leaderboard {
   get() {
     return this.board;
   }
+
   addScore(name, score) {
-    this.board.push(new Score(name,+score));
+    this.board.push(new Score(name, +score));
   }
 
   erase() {
