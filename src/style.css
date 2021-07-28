@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  padding: 20px 0 50px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.dir-column {
+  flex-direction: column;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.leaderboard-wrapper {
+  justify-content: space-around;
+}
+
+.recent-scores-header {
+  align-items: center;
+}
+
+.recent-scores-header h3 {
+  padding-right: 20px;
+}
+
+.add-score-wrapper > div {
+  padding-bottom: 30px;
+}
+
+.btn {
+  padding: 2px;
+  width: 100px;
+  height: 30px;
+}
+
+.submit-btn {
+  float: right;
+}
+
+.add-score-wrapper input {
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.scores-ul {
+  border: 3px solid black;
+  padding: 20px;
+}
