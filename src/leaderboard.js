@@ -14,7 +14,7 @@ export default class Leaderboard {
 
   async updateBoard(board) {
     this.board = board;
-    this.board = this.board.sort((a, b) => b.score-a.score);
+    this.board = this.board.sort((a, b) => b.score - a.score);
   }
 
   async get() {
@@ -22,7 +22,7 @@ export default class Leaderboard {
   }
 
   async addScore(name, score) {
-    await this.api.postScore(name,score);
+    await this.api.postScore(name, score);
     await this.refresh();
   }
 
