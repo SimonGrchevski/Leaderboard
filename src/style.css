@@ -26,6 +26,12 @@ header {
   width: 40%;
 }
 
+body {
+  background: url(./assets/wallpaper.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
 .leaderboard-wrapper {
   justify-content: space-around;
 }
@@ -59,6 +65,17 @@ header {
 }
 
 .scores-ul {
-  border: 3px solid black;
+  border: 20px solid transparent;
+  border-image: url('./assets/border.png') 30 repeat;
+  border-left: 20px solid black;
   padding: 20px;
+}
+
+.scores-ul li {
+  color: black;
+  font-size: 25px;
+}
+.scores-ul li:nth-child(odd) {
+  background-color: red;
+
 }
