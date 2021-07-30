@@ -22,7 +22,6 @@ export default class Leaderboard {
   }
 
   async addScore(name, score) {
-    console.log(name);
     await this.api.postScore(name,score);
     await this.refresh();
   }

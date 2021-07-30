@@ -18,9 +18,15 @@ export default class Dom {
     return this.refreshBtn;
   }
 
+  resetInp() {
+    this.nameInp.value = '';
+    this.scoreInp.value = '';
+  }
+
   async addScore() {
     await this.leaderboard.addScore(this.nameInp.value, this.scoreInp.value);
     await this.refresh();
+    this.resetInp();
   }
 
   static createSpans(values) {
@@ -49,7 +55,6 @@ export default class Dom {
 
   async refresh() {
     this.scores.innerHTML = '';
-    console.log(this.leaderboard.board);
     this.leaderboard.board.forEach((s) => {
       this.scores.append(Dom.createScore(s.user, s.score));
     });
