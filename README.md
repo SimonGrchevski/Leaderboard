@@ -7,9 +7,12 @@
 
   - Add new score
   - Remove all scores
+  - create a game
+  - add a new score to the leaderboard
+  - refresh a leaderboard with the latest changes
   - ( on the next milestone It will fetch data from API)
 
-![screenshot](./Screenshot.png)
+![screenshot](./screenshot.png)
 
 Additional description about the project and its features.
 

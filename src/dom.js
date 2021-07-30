@@ -18,9 +18,15 @@ export default class Dom {
     return this.refreshBtn;
   }
 
-  addScore() {
-    this.leaderboard.addScore(this.nameInp.value, this.scoreInp.value);
-    this.refresh();
+  resetInp() {
+    this.nameInp.value = '';
+    this.scoreInp.value = '';
+  }
+
+  async addScore() {
+    await this.leaderboard.addScore(this.nameInp.value, this.scoreInp.value);
+    await this.refresh();
+    this.resetInp();
   }
 
   static createSpans(values) {
@@ -47,15 +53,20 @@ export default class Dom {
       );
   }
 
-  refresh() {
+  async refresh() {
     this.scores.innerHTML = '';
-    this.leaderboard.get().forEach((s) => {
-      this.scores.append(Dom.createScore(s.name, s.score));
+    this.leaderboard.board.forEach((s) => {
+      this.scores.append(Dom.createScore(s.user, s.score));
     });
   }
 
   clear() {
     this.leaderboard.erase();
     this.refresh();
+  }
+
+  async printScores() {
+    await this.leaderboard.refresh();
+    await this.refresh();
   }
 }
