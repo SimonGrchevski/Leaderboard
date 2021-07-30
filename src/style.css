@@ -50,6 +50,7 @@ header {
 body {
   background: url(./assets/wallpaper.jpg);
   background-size: cover;
+  background-position-x: 30%;
   width: 100vw;
   height: 100vh;
 }
@@ -101,6 +102,7 @@ body {
   outline: none;
   background-color: rgba(255, 255, 255, 0.501);
   border-radius: 2px;
+  font-weight: bold;
 }
 
 .scores-ul {
@@ -111,22 +113,13 @@ body {
 }
 
 .scores-ul li {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.775);
+  font-weight: bold;
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.scores-ul li:nth-child(odd) {
-  background: url(./assets/red-texture-bloody-border.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-}
-
-.scores-ul li:nth-child(even) {
-  background: url(./assets/red-texture-bloody-border.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-  /* background-color: rgba(214, 9, 9, 0.118); */
-  /* box-shadow: 1px 4px 1px 1px rgba(0, 0, 0, 0.439); */
+.scores-ul li {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.885),20% ,rgba(214, 9, 9, 0.076));
 }
