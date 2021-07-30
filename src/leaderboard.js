@@ -15,6 +15,7 @@ export default class Leaderboard {
 
   async updateBoard(board) {
     this.board = board;
+    this.board = this.board.sort((a, b) => b.score-a.score);
   }
 
   async get() {

@@ -1,7 +1,7 @@
 export default class Api {
   constructor() {
     this.baseURL = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/";
-    this.id = "D5yoWRMJdPAB5rVNrH0X";
+    this.id = "XUzURl6PXEEeWIzck7co";
     this.url = `${this.baseURL}${this.id}/scores/`;
     this.header = new Headers({"Content-type": "application/json; charset=UTF-8"});
   }
