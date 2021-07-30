@@ -1,5 +1,4 @@
 import Api from './api.js';
-import Score from './score.js';
 
 export default class Leaderboard {
   board;
