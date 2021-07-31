@@ -64,7 +64,7 @@ body {
 
 .recent-scores-wrapper,
 .add-score-wrapper {
-  /* stylelint-disable-line length-zero-no-unit */
+  /* stylelint-disable */
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
@@ -81,8 +81,11 @@ body {
     rgba(0, 0, 0, 0.07) 0px 32px 64px;
   padding: 30px;
 
-  /* stylelint-disable-line length-zero-no-unit */
-  /* I just couldnt find any other solution to this problem,its looking like a bug. */
+  /* stylelint-enable */
+
+  /*Its flagged as error length-zero-no-unit, but its for rgba. 
+    I just couldnt find any other solution to this problem.
+    It's looking like a bug. It shouldnt report it as error. */
 }
 
 .add-score-wrapper {
