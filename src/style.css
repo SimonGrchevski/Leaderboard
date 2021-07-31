@@ -82,9 +82,14 @@ body {
 }
 
 .recent-scores-wrapper {
-  
   overflow-y: scroll;
+  height: 500px;
 }
+
+.add-score-wrapper {
+  max-height: 350px;
+}
+
 
 .recent-scores-wrapper,
 .add-score-wrapper {
@@ -104,7 +109,6 @@ body {
     rgba(0, 0, 0, 0.07) 0px 16px 32px,
     rgba(0, 0, 0, 0.07) 0px 32px 64px;
   padding: 30px;
-  min-height: 350px;
   /* stylelint-enable */
 
   /* Its flagged as error length-zero-no-unit, but its for rgba.
@@ -150,8 +154,30 @@ body {
 }
 
 .scores-ul li {
-  color: #fffafabd;
+  color: #f8f8f872;
   font-size: 25px;
   text-align: center;
-  background: url(./assets/border.png);
+}
+
+.scores-ul li:nth-child(even)
+{
+  background: linear-gradient(
+      rgba(128, 4, 216, 0.104),
+      rgba(0, 0, 0, 0.604)
+    ),
+    url(./assets/border.png);
+}
+
+.scores-ul li:nth-child(odd)
+{
+  background: linear-gradient(
+      rgba(232, 4, 4, 0.056),
+      rgba(0, 0, 0, 0.604)
+    ),
+    url(./assets/border.png);
+}
+
+.scores-ul > li:hover {
+  background: none;
+  color: #f8f8f8ce;
 }
