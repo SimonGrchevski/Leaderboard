@@ -83,7 +83,7 @@ body {
 
   /* stylelint-enable */
 
-  /*Its flagged as error length-zero-no-unit, but its for rgba. 
+  /* Its flagged as error length-zero-no-unit, but its for rgba.
     I just couldnt find any other solution to this problem.
     It's looking like a bug. It shouldnt report it as error. */
 }
