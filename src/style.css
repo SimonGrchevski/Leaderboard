@@ -80,8 +80,6 @@ body {
     rgba(0, 0, 0, 0.07) 0px 16px 32px,
     rgba(0, 0, 0, 0.07) 0px 32px 64px;
   padding: 30px;
-
-  /* stylelint-enable-line length-zero-no-unit */
   /* I just couldnt find any other solution to this problem,its looking like a bug. */
 }
 
