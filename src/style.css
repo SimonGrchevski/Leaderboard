@@ -6,12 +6,75 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Gowun Batang', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(169, 160, 160, 0.213);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00000046;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.624);
+}
+
+h1 {
+  font-size: 50px;
+  color: rgba(29, 0, 29, 0.974);
+}
+
+h3 {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.809);
+  animation-name: colorChange;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 30%, rgba(248, 11, 11, 0.2));
+  }
+
+  25% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 50%, rgba(248, 11, 11, 0.27));
+  }
+
+  50% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 70%, rgba(248, 11, 11, 0.34));
+  }
+
+  75% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 80%, rgba(248, 11, 11, 0.41));
+  }
+
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 90%, rgba(248, 11, 11, 0.48));
+  }
+}
+
 li {
   list-style-type: none;
 }
 
 header {
-  padding: 20px 0 50px 0;
+  padding: 20px 0 50px 30px;
 }
 
 .flex {
@@ -26,16 +89,65 @@ header {
   width: 40%;
 }
 
+body {
+  background: url(./assets/wallpaper.jpg);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position-x: 40%;
+  width: 100vw;
+  height: 100vh;
+  animation-name: wallpaperAnimation;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+
+@keyframes wallpaperAnimation {
+  from {
+    background-size: 300%;
+    transform: scale(4);
+  }
+
+  to {
+    background-size: 130%;
+    transform: scale(1);
+  }
+}
+
 .leaderboard-wrapper {
   justify-content: space-around;
+  align-items: baseline;
 }
 
 .recent-scores-header {
   align-items: center;
 }
 
+.recent-scores-wrapper {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.add-score-wrapper {
+  max-height: 350px;
+  text-align: right;
+}
+
+.recent-scores-wrapper,
+.add-score-wrapper {
+  /* stylelint-disable */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(./assets/red-texture-bloody-border.jpg);
+  background-size: 2%;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  padding: 30px;
+  /* stylelint-enable */
+
+  /* Its flagged as error length-zero-no-unit, but its for rgba.
+    I just couldnt find any other solution to this problem.
+    It's looking like a bug. It shouldnt report it as error. */
+}
+
 .recent-scores-header h3 {
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .add-score-wrapper > div {
@@ -46,19 +158,42 @@ header {
   padding: 2px;
   width: 100px;
   height: 30px;
+  background-image: url(./assets/border.png);
+  color: rgba(29, 0, 29, 0.974);
 }
 
 .submit-btn {
   float: right;
 }
 
-.add-score-wrapper input {
+.add-score-wrapper input[type=text] {
   padding: 5px;
-  border: 1px solid gray;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.385);
   border-radius: 2px;
 }
 
 .scores-ul {
-  border: 3px solid black;
-  padding: 20px;
+  padding: 30px;
+  min-height: 100px;
+}
+
+.scores-ul li {
+  color: #f8f8f872;
+  font-size: 25px;
+  text-align: center;
+}
+
+.scores-ul li:nth-child(even) {
+  background: linear-gradient(rgba(128, 4, 216, 0.104), rgba(0, 0, 0, 0.604)), url(./assets/border.png);
+}
+
+.scores-ul li:nth-child(odd) {
+  background: linear-gradient(rgba(232, 4, 4, 0.056), rgba(0, 0, 0, 0.604)), url(./assets/border.png);
+}
+
+.scores-ul > li:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.131), 90%, rgba(248, 11, 11, 0.672)), url(./assets/border.png);
+  color: #f8f8f8a4;
 }
