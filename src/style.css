@@ -16,7 +16,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
@@ -26,7 +26,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00000046; 
+  background: #00000046;
 }
 
 ::placeholder {
@@ -48,40 +48,24 @@ h3 {
 }
 
 @keyframes colorChange {
-  0%
-  {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.029),30%,
-      rgba(248, 11, 11, 0.200)
-    )
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 30%, rgba(248, 11, 11, 0.2));
   }
-  25%
-  {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.029),50%,
-      rgba(248, 11, 11, 0.270)
-    )
+
+  25% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 50%, rgba(248, 11, 11, 0.27));
   }
-  50%
-  {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.029),70%,
-      rgba(248, 11, 11, 0.340)
-    )
+
+  50% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 70%, rgba(248, 11, 11, 0.34));
   }
-  75%
-  {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.029),80%,
-      rgba(248, 11, 11, 0.410)
-    )
+
+  75% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 80%, rgba(248, 11, 11, 0.41));
   }
-  100% 
-  {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.029),90%,
-      rgba(248, 11, 11, 0.480)
-    )
+
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.029), 90%, rgba(248, 11, 11, 0.48));
   }
 }
 
@@ -114,17 +98,16 @@ body {
   height: 100vh;
   animation-name: wallpaperAnimation;
   animation-duration: 1s;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 @keyframes wallpaperAnimation {
-
   from {
-    background-size: 300%; 
+    background-size: 300%;
     transform: scale(4);
   }
-  to
-  {
+
+  to {
     background-size: 130%;
     transform: scale(1);
   }
@@ -146,36 +129,21 @@ body {
 
 .add-score-wrapper {
   max-height: 350px;
+  text-align: right;
 }
-
 
 .recent-scores-wrapper,
 .add-score-wrapper {
   /* stylelint-disable */
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(./assets/red-texture-bloody-border.jpg);
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(./assets/red-texture-bloody-border.jpg);
   background-size: 2%;
-  box-shadow:
-    rgba(0, 0, 0, 0.07) 0px 1px 2px,
-    rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px,
-    rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px,
-    rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   padding: 30px;
   /* stylelint-enable */
 
   /* Its flagged as error length-zero-no-unit, but its for rgba.
     I just couldnt find any other solution to this problem.
     It's looking like a bug. It shouldnt report it as error. */
-}
-
-.add-score-wrapper {
-  text-align: right;
 }
 
 .recent-scores-header h3 {
@@ -217,29 +185,15 @@ body {
   text-align: center;
 }
 
-.scores-ul li:nth-child(even)
-{
-  background: linear-gradient(
-      rgba(128, 4, 216, 0.104),
-      rgba(0, 0, 0, 0.604)
-    ),
-    url(./assets/border.png);
+.scores-ul li:nth-child(even) {
+  background: linear-gradient(rgba(128, 4, 216, 0.104), rgba(0, 0, 0, 0.604)), url(./assets/border.png);
 }
 
-.scores-ul li:nth-child(odd)
-{
-  background: linear-gradient(
-      rgba(232, 4, 4, 0.056),
-      rgba(0, 0, 0, 0.604)
-    ),
-    url(./assets/border.png);
+.scores-ul li:nth-child(odd) {
+  background: linear-gradient(rgba(232, 4, 4, 0.056), rgba(0, 0, 0, 0.604)), url(./assets/border.png);
 }
 
 .scores-ul > li:hover {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.131),90%,
-      rgba(248, 11, 11, 0.672)
-    ),
-    url(./assets/border.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.131), 90%, rgba(248, 11, 11, 0.672)), url(./assets/border.png);
   color: #f8f8f8a4;
 }
