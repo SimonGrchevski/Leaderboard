@@ -178,6 +178,10 @@ body {
 }
 
 .scores-ul > li:hover {
-  background: none;
-  color: #f8f8f8ce;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.131),90%,
+      rgba(248, 11, 11, 0.672)
+    ),
+    url(./assets/border.png);
+  color: #f8f8f8a4;
 }
