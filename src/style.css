@@ -66,9 +66,9 @@ body {
 .add-score-wrapper {
   background-image:
     linear-gradient(
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.5)
-  ),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
     url(./assets/red-texture-bloody-border.jpg);
   background-size: 2%;
   box-shadow:
