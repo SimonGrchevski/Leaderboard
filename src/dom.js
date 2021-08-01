@@ -69,7 +69,6 @@ export default class Dom {
     }
   }
 
-
   async refresh() {
     this.scores.innerHTML = '';
     this.leaderboard.board.forEach((s) => {

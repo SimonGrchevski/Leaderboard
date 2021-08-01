@@ -158,8 +158,19 @@ body {
   padding: 2px;
   width: 100px;
   height: 30px;
-  background-image: url(./assets/border.png);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.268), 50%, 
+    rgba(255, 255, 255, 0.09)), 
+    url(./assets/border.png);
   color: rgba(29, 0, 29, 0.974);
+}
+
+.btn:hover {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0), 90%, 
+    rgba(232, 4, 4, 0.056)), 
+    url(./assets/border.png);
+    color: #f9f9f9a1;
 }
 
 .submit-btn {
