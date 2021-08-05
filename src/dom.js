@@ -53,11 +53,26 @@ export default class Dom {
       );
   }
 
+  animateFadeIn = () => {
+    let opacity = 0;
+    let id = 0;
+    const { scores } = this;
+    scores.style.opacity = opacity;
+    clearInterval(id);
+    function frame() {
+      if (opacity >= 1) clearInterval(id);
+      else { opacity += 0.1; }
+      scores.style.opacity = opacity;
+    }
+    id = setInterval(frame, 100);
+  }
+
   async refresh() {
     this.scores.innerHTML = '';
     this.leaderboard.board.forEach((s) => {
       this.scores.append(Dom.createScore(s.user, s.score));
     });
+    this.animateFadeIn();
   }
 
   clear() {
